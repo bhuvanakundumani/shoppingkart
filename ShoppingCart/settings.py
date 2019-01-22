@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'search_app',
     'cart',
     'stripe',
+    'order',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -58,7 +61,7 @@ ROOT_URLCONF = 'ShoppingCart.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'shop', 'templates/'), os.path.join(BASE_DIR, 'search_app','templates/'), os.path.join(BASE_DIR, 'cart','templates/')],
+        'DIRS': [os.path.join(BASE_DIR, 'shop', 'templates/'), os.path.join(BASE_DIR, 'search_app','templates/'), os.path.join(BASE_DIR, 'cart','templates/'),os.path.join(BASE_DIR,'order','templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,3 +137,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 
 STRIPE_PUBLISHABLE_KEY = 'pk_test_ETnPizl0iWnMoiUILouDqWsU'
 STRIPE_SECRET_KEY ='sk_test_WMIzvwrf4zpqXxUzan5oX0aZ'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
